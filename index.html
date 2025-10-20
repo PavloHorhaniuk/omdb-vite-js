@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OMDb Search</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styleh.css" />
+</head>
+
+<body>
+  <header>
+    <div class="wrap search-bar">
+      <form class="search-form" id="search-form" autocomplete="off">
+        <input type="text" id="query" placeholder="Search movies, series..." />
+        <select id="type" class="select">
+          <option value="">All</option>
+          <option value="movie">Movie</option>
+          <option value="series">Series</option>
+          <option value="episode">Episode</option>
+          <option value="game">Game</option>
+        </select>
+      </form>
+      <button id="search-btn" class="btn"><span class="material-icons">search</span>Шукати</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <ul class="gallery" id="gallery" aria-live="polite"></ul>
+    <div class="controls">
+      <button id="load-more" class="btn" style="display:none"><span class="material-icons">download</span>Load
+        more</button>
+    </div>
+    <div id="loader" class="spinner">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </main>
+
+  <footer>Дані: <a href="https://www.omdbapi.com" target="_blank" rel="noreferrer noopener">OMDb API</a></footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
